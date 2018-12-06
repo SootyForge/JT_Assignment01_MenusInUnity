@@ -1,0 +1,744 @@
+fileFormatVersion: 2
+guid: e62056c3212cc5748879349ec0bb2b1c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: group1
+    100004: Grp_Obj_Bridge_Broken
+    100006: Grp_Obj_Minecart
+    100008: Grp_Obj_Minecart1
+    100010: Grp_Obj_RailbedPlanks
+    100012: Grp_Obj_RailBridge_Support_001
+    100014: Grp_Obj_RailBridge_Support_002
+    100016: Grp_Obj_RailBridge_Support_003
+    100018: Grp_Obj_RailBuffer
+    100020: Grp_Obj_Rails
+    100022: Grp_Obj_Rails_Bridge
+    100024: Modular_Assets
+    100026: Obj_Bridge_Broken_v2_001
+    100028: Obj_Bridge_Broken_v2_002
+    100030: Obj_Bridge_Platform
+    100032: Obj_Bridge_SupportBeam
+    100034: Obj_Bridge_SupportBeam_Broken
+    100036: Obj_BufferBeam_Bottom
+    100038: Obj_BufferBeam_Top
+    100040: Obj_BufferPost_L
+    100042: Obj_BufferPost_R
+    100044: Obj_Cave_Entrance
+    100046: Obj_Cave_Entrance1
+    100048: Obj_HeroAsset
+    100050: Obj_Mine_Support_Crossbeam
+    100052: Obj_Mine_Support_L
+    100054: Obj_Mine_Support_R
+    100056: Obj_Minecart_Chassis
+    100058: Obj_Minecart_Chassis 1
+    100060: Obj_Minecart_frontAxle
+    100062: Obj_Minecart_frontAxle 1
+    100064: Obj_Minecart_frontLight
+    100066: Obj_Minecart_frontWheel_L
+    100068: Obj_Minecart_frontWheel_L 1
+    100070: Obj_Minecart_frontWheel_R
+    100072: Obj_Minecart_rearAxle
+    100074: Obj_Minecart_rearLight
+    100076: Obj_Minecart_rearLight 1
+    100078: Obj_Minecart_rearWheel_L
+    100080: Obj_Minecart_rearWheel_L 1
+    100082: Obj_Minecart_rearWheel_R
+    100084: Obj_Minecart_rearWheel_R 1
+    100086: Obj_Rail_L
+    100088: Obj_Rail_L 1
+    100090: Obj_Rail_R
+    100092: Obj_Rail_R 1
+    100094: Obj_RailbedPlank001
+    100096: Obj_RailbedPlank001 1
+    100098: Obj_RailbedPlank002
+    100100: Obj_RailbedPlank002 1
+    100102: Obj_RailbedPlank003
+    100104: Obj_RailbedPlank003 1
+    100106: Obj_RailbedPlank004
+    100108: Obj_RailbedPlank004 1
+    100110: Obj_RailbedPlank005
+    100112: Obj_RailbedPlank005 1
+    100114: Obj_RailbedPlank006
+    100116: Obj_RailbedPlank006 1
+    100118: Obj_RailbedPlank007
+    100120: Obj_RailbedPlank007 1
+    100122: Obj_RailbedPlank008
+    100124: Obj_RailbedPlank008 1
+    100126: Obj_RailbedPlank009
+    100128: Obj_RailbedPlank009 1
+    100130: Obj_RailbedPlank010
+    100132: Obj_RailbedPlank010 1
+    100134: Obj_RailbedPlank011
+    100136: Obj_RailbedPlank011 1
+    100138: Obj_RailbedPlank012
+    100140: Obj_RailbedPlank012 1
+    100142: Obj_RailbedPlank013
+    100144: Obj_RailbedPlank013 1
+    100146: Obj_RailbedPlank014
+    100148: Obj_RailbedPlank015
+    100150: Obj_RailbedPlank016
+    100152: Obj_RailbedPlank017
+    100154: Obj_RailbedPlank018
+    100156: Obj_RailbedPlank019
+    100158: Obj_RailbedPlank020
+    100160: Obj_RailbedPlank021
+    100162: Obj_RailbedPlank022
+    100164: Obj_RailbedPlank023
+    100166: Obj_RailbedPlank024
+    100168: Obj_RailbedPlank025
+    100170: Obj_RailbedPlank026
+    100172: Obj_RailbedPlank027
+    100174: Obj_RailbedPlank028
+    100176: Obj_RailbedPlank029
+    100178: Obj_RailbedPlank030
+    100180: Obj_RailbedPlank031
+    100182: Obj_RailbedPlank032
+    100184: Obj_RailbedPlank033
+    100186: Obj_RailbedPlank034
+    100188: Obj_RailbedPlank035
+    100190: Obj_RailbedPlank036
+    100192: Obj_RailbedPlank037
+    100194: Obj_RailbedPlank038
+    100196: Obj_RailbedPlank039
+    100198: Obj_RailbedPlank040
+    100200: Obj_RailbedPlank041
+    100202: Obj_RailbedPlank042
+    100204: Obj_RailbedPlank043
+    100206: Obj_RailbedPlank044
+    100208: Obj_RailbedPlank045
+    100210: Obj_RailbedPlank046
+    100212: Obj_RailbedPlank047
+    100214: Obj_RailBridge_BrokenBeam
+    100216: Obj_RailBridge_BrokenBeam1
+    100218: Obj_RailBridge_CrossBeam
+    100220: Obj_RailBridge_CrossBeam 1
+    100222: Obj_RailBridge_CrossBeam 2
+    100224: Obj_RailBridge_SupportBeam_L
+    100226: Obj_RailBridge_SupportBeam_L 1
+    100228: Obj_RailBridge_SupportBeam_L 2
+    100230: Obj_RailBridge_SupportBeam_R
+    100232: Obj_RailBridge_SupportBeam_R 1
+    100234: Obj_RailBridge_SupportBeam_R 2
+    100236: Obj_Rock001_001
+    100238: Obj_Rock001_002
+    100240: Obj_Rock002_001
+    100242: Obj_Rock002_002
+    100244: Obj_Rock002_003
+    100246: Obj_Shack
+    100248: Obj_Terrain
+    100250: Obj_Terrain1_DUP
+    100252: Obj_Water
+    100254: pCube12
+    400000: //RootNode
+    400002: group1
+    400004: Grp_Obj_Bridge_Broken
+    400006: Grp_Obj_Minecart
+    400008: Grp_Obj_Minecart1
+    400010: Grp_Obj_RailbedPlanks
+    400012: Grp_Obj_RailBridge_Support_001
+    400014: Grp_Obj_RailBridge_Support_002
+    400016: Grp_Obj_RailBridge_Support_003
+    400018: Grp_Obj_RailBuffer
+    400020: Grp_Obj_Rails
+    400022: Grp_Obj_Rails_Bridge
+    400024: Modular_Assets
+    400026: Obj_Bridge_Broken_v2_001
+    400028: Obj_Bridge_Broken_v2_002
+    400030: Obj_Bridge_Platform
+    400032: Obj_Bridge_SupportBeam
+    400034: Obj_Bridge_SupportBeam_Broken
+    400036: Obj_BufferBeam_Bottom
+    400038: Obj_BufferBeam_Top
+    400040: Obj_BufferPost_L
+    400042: Obj_BufferPost_R
+    400044: Obj_Cave_Entrance
+    400046: Obj_Cave_Entrance1
+    400048: Obj_HeroAsset
+    400050: Obj_Mine_Support_Crossbeam
+    400052: Obj_Mine_Support_L
+    400054: Obj_Mine_Support_R
+    400056: Obj_Minecart_Chassis
+    400058: Obj_Minecart_Chassis 1
+    400060: Obj_Minecart_frontAxle
+    400062: Obj_Minecart_frontAxle 1
+    400064: Obj_Minecart_frontLight
+    400066: Obj_Minecart_frontWheel_L
+    400068: Obj_Minecart_frontWheel_L 1
+    400070: Obj_Minecart_frontWheel_R
+    400072: Obj_Minecart_rearAxle
+    400074: Obj_Minecart_rearLight
+    400076: Obj_Minecart_rearLight 1
+    400078: Obj_Minecart_rearWheel_L
+    400080: Obj_Minecart_rearWheel_L 1
+    400082: Obj_Minecart_rearWheel_R
+    400084: Obj_Minecart_rearWheel_R 1
+    400086: Obj_Rail_L
+    400088: Obj_Rail_L 1
+    400090: Obj_Rail_R
+    400092: Obj_Rail_R 1
+    400094: Obj_RailbedPlank001
+    400096: Obj_RailbedPlank001 1
+    400098: Obj_RailbedPlank002
+    400100: Obj_RailbedPlank002 1
+    400102: Obj_RailbedPlank003
+    400104: Obj_RailbedPlank003 1
+    400106: Obj_RailbedPlank004
+    400108: Obj_RailbedPlank004 1
+    400110: Obj_RailbedPlank005
+    400112: Obj_RailbedPlank005 1
+    400114: Obj_RailbedPlank006
+    400116: Obj_RailbedPlank006 1
+    400118: Obj_RailbedPlank007
+    400120: Obj_RailbedPlank007 1
+    400122: Obj_RailbedPlank008
+    400124: Obj_RailbedPlank008 1
+    400126: Obj_RailbedPlank009
+    400128: Obj_RailbedPlank009 1
+    400130: Obj_RailbedPlank010
+    400132: Obj_RailbedPlank010 1
+    400134: Obj_RailbedPlank011
+    400136: Obj_RailbedPlank011 1
+    400138: Obj_RailbedPlank012
+    400140: Obj_RailbedPlank012 1
+    400142: Obj_RailbedPlank013
+    400144: Obj_RailbedPlank013 1
+    400146: Obj_RailbedPlank014
+    400148: Obj_RailbedPlank015
+    400150: Obj_RailbedPlank016
+    400152: Obj_RailbedPlank017
+    400154: Obj_RailbedPlank018
+    400156: Obj_RailbedPlank019
+    400158: Obj_RailbedPlank020
+    400160: Obj_RailbedPlank021
+    400162: Obj_RailbedPlank022
+    400164: Obj_RailbedPlank023
+    400166: Obj_RailbedPlank024
+    400168: Obj_RailbedPlank025
+    400170: Obj_RailbedPlank026
+    400172: Obj_RailbedPlank027
+    400174: Obj_RailbedPlank028
+    400176: Obj_RailbedPlank029
+    400178: Obj_RailbedPlank030
+    400180: Obj_RailbedPlank031
+    400182: Obj_RailbedPlank032
+    400184: Obj_RailbedPlank033
+    400186: Obj_RailbedPlank034
+    400188: Obj_RailbedPlank035
+    400190: Obj_RailbedPlank036
+    400192: Obj_RailbedPlank037
+    400194: Obj_RailbedPlank038
+    400196: Obj_RailbedPlank039
+    400198: Obj_RailbedPlank040
+    400200: Obj_RailbedPlank041
+    400202: Obj_RailbedPlank042
+    400204: Obj_RailbedPlank043
+    400206: Obj_RailbedPlank044
+    400208: Obj_RailbedPlank045
+    400210: Obj_RailbedPlank046
+    400212: Obj_RailbedPlank047
+    400214: Obj_RailBridge_BrokenBeam
+    400216: Obj_RailBridge_BrokenBeam1
+    400218: Obj_RailBridge_CrossBeam
+    400220: Obj_RailBridge_CrossBeam 1
+    400222: Obj_RailBridge_CrossBeam 2
+    400224: Obj_RailBridge_SupportBeam_L
+    400226: Obj_RailBridge_SupportBeam_L 1
+    400228: Obj_RailBridge_SupportBeam_L 2
+    400230: Obj_RailBridge_SupportBeam_R
+    400232: Obj_RailBridge_SupportBeam_R 1
+    400234: Obj_RailBridge_SupportBeam_R 2
+    400236: Obj_Rock001_001
+    400238: Obj_Rock001_002
+    400240: Obj_Rock002_001
+    400242: Obj_Rock002_002
+    400244: Obj_Rock002_003
+    400246: Obj_Shack
+    400248: Obj_Terrain
+    400250: Obj_Terrain1_DUP
+    400252: Obj_Water
+    400254: pCube12
+    2100000: lambert4
+    2100002: StingrayPBS1
+    2100004: ShaderfxShader1
+    2100006: lambert3
+    2100008: lambert1
+    2300000: Obj_Bridge_Broken_v2_001
+    2300002: Obj_Bridge_Broken_v2_002
+    2300004: Obj_Bridge_Platform
+    2300006: Obj_Bridge_SupportBeam
+    2300008: Obj_Bridge_SupportBeam_Broken
+    2300010: Obj_BufferBeam_Bottom
+    2300012: Obj_BufferBeam_Top
+    2300014: Obj_BufferPost_L
+    2300016: Obj_BufferPost_R
+    2300018: Obj_Cave_Entrance
+    2300020: Obj_Cave_Entrance1
+    2300022: Obj_HeroAsset
+    2300024: Obj_Mine_Support_Crossbeam
+    2300026: Obj_Mine_Support_L
+    2300028: Obj_Mine_Support_R
+    2300030: Obj_Minecart_Chassis
+    2300032: Obj_Minecart_Chassis 1
+    2300034: Obj_Minecart_frontAxle
+    2300036: Obj_Minecart_frontAxle 1
+    2300038: Obj_Minecart_frontLight
+    2300040: Obj_Minecart_frontWheel_L
+    2300042: Obj_Minecart_frontWheel_L 1
+    2300044: Obj_Minecart_frontWheel_R
+    2300046: Obj_Minecart_rearAxle
+    2300048: Obj_Minecart_rearLight
+    2300050: Obj_Minecart_rearLight 1
+    2300052: Obj_Minecart_rearWheel_L
+    2300054: Obj_Minecart_rearWheel_L 1
+    2300056: Obj_Minecart_rearWheel_R
+    2300058: Obj_Minecart_rearWheel_R 1
+    2300060: Obj_Rail_L
+    2300062: Obj_Rail_L 1
+    2300064: Obj_Rail_R
+    2300066: Obj_Rail_R 1
+    2300068: Obj_RailbedPlank001
+    2300070: Obj_RailbedPlank001 1
+    2300072: Obj_RailbedPlank002
+    2300074: Obj_RailbedPlank002 1
+    2300076: Obj_RailbedPlank003
+    2300078: Obj_RailbedPlank003 1
+    2300080: Obj_RailbedPlank004
+    2300082: Obj_RailbedPlank004 1
+    2300084: Obj_RailbedPlank005
+    2300086: Obj_RailbedPlank005 1
+    2300088: Obj_RailbedPlank006
+    2300090: Obj_RailbedPlank006 1
+    2300092: Obj_RailbedPlank007
+    2300094: Obj_RailbedPlank007 1
+    2300096: Obj_RailbedPlank008
+    2300098: Obj_RailbedPlank008 1
+    2300100: Obj_RailbedPlank009
+    2300102: Obj_RailbedPlank009 1
+    2300104: Obj_RailbedPlank010
+    2300106: Obj_RailbedPlank010 1
+    2300108: Obj_RailbedPlank011
+    2300110: Obj_RailbedPlank011 1
+    2300112: Obj_RailbedPlank012
+    2300114: Obj_RailbedPlank012 1
+    2300116: Obj_RailbedPlank013
+    2300118: Obj_RailbedPlank013 1
+    2300120: Obj_RailbedPlank014
+    2300122: Obj_RailbedPlank015
+    2300124: Obj_RailbedPlank016
+    2300126: Obj_RailbedPlank017
+    2300128: Obj_RailbedPlank018
+    2300130: Obj_RailbedPlank019
+    2300132: Obj_RailbedPlank020
+    2300134: Obj_RailbedPlank021
+    2300136: Obj_RailbedPlank022
+    2300138: Obj_RailbedPlank023
+    2300140: Obj_RailbedPlank024
+    2300142: Obj_RailbedPlank025
+    2300144: Obj_RailbedPlank026
+    2300146: Obj_RailbedPlank027
+    2300148: Obj_RailbedPlank028
+    2300150: Obj_RailbedPlank029
+    2300152: Obj_RailbedPlank030
+    2300154: Obj_RailbedPlank031
+    2300156: Obj_RailbedPlank032
+    2300158: Obj_RailbedPlank033
+    2300160: Obj_RailbedPlank034
+    2300162: Obj_RailbedPlank035
+    2300164: Obj_RailbedPlank036
+    2300166: Obj_RailbedPlank037
+    2300168: Obj_RailbedPlank038
+    2300170: Obj_RailbedPlank039
+    2300172: Obj_RailbedPlank040
+    2300174: Obj_RailbedPlank041
+    2300176: Obj_RailbedPlank042
+    2300178: Obj_RailbedPlank043
+    2300180: Obj_RailbedPlank044
+    2300182: Obj_RailbedPlank045
+    2300184: Obj_RailbedPlank046
+    2300186: Obj_RailbedPlank047
+    2300188: Obj_RailBridge_BrokenBeam
+    2300190: Obj_RailBridge_BrokenBeam1
+    2300192: Obj_RailBridge_CrossBeam
+    2300194: Obj_RailBridge_CrossBeam 1
+    2300196: Obj_RailBridge_CrossBeam 2
+    2300198: Obj_RailBridge_SupportBeam_L
+    2300200: Obj_RailBridge_SupportBeam_L 1
+    2300202: Obj_RailBridge_SupportBeam_L 2
+    2300204: Obj_RailBridge_SupportBeam_R
+    2300206: Obj_RailBridge_SupportBeam_R 1
+    2300208: Obj_RailBridge_SupportBeam_R 2
+    2300210: Obj_Rock001_001
+    2300212: Obj_Rock001_002
+    2300214: Obj_Rock002_001
+    2300216: Obj_Rock002_002
+    2300218: Obj_Rock002_003
+    2300220: Obj_Shack
+    2300222: Obj_Terrain
+    2300224: Obj_Terrain1_DUP
+    2300226: Obj_Water
+    2300228: pCube12
+    3300000: Obj_Bridge_Broken_v2_001
+    3300002: Obj_Bridge_Broken_v2_002
+    3300004: Obj_Bridge_Platform
+    3300006: Obj_Bridge_SupportBeam
+    3300008: Obj_Bridge_SupportBeam_Broken
+    3300010: Obj_BufferBeam_Bottom
+    3300012: Obj_BufferBeam_Top
+    3300014: Obj_BufferPost_L
+    3300016: Obj_BufferPost_R
+    3300018: Obj_Cave_Entrance
+    3300020: Obj_Cave_Entrance1
+    3300022: Obj_HeroAsset
+    3300024: Obj_Mine_Support_Crossbeam
+    3300026: Obj_Mine_Support_L
+    3300028: Obj_Mine_Support_R
+    3300030: Obj_Minecart_Chassis
+    3300032: Obj_Minecart_Chassis 1
+    3300034: Obj_Minecart_frontAxle
+    3300036: Obj_Minecart_frontAxle 1
+    3300038: Obj_Minecart_frontLight
+    3300040: Obj_Minecart_frontWheel_L
+    3300042: Obj_Minecart_frontWheel_L 1
+    3300044: Obj_Minecart_frontWheel_R
+    3300046: Obj_Minecart_rearAxle
+    3300048: Obj_Minecart_rearLight
+    3300050: Obj_Minecart_rearLight 1
+    3300052: Obj_Minecart_rearWheel_L
+    3300054: Obj_Minecart_rearWheel_L 1
+    3300056: Obj_Minecart_rearWheel_R
+    3300058: Obj_Minecart_rearWheel_R 1
+    3300060: Obj_Rail_L
+    3300062: Obj_Rail_L 1
+    3300064: Obj_Rail_R
+    3300066: Obj_Rail_R 1
+    3300068: Obj_RailbedPlank001
+    3300070: Obj_RailbedPlank001 1
+    3300072: Obj_RailbedPlank002
+    3300074: Obj_RailbedPlank002 1
+    3300076: Obj_RailbedPlank003
+    3300078: Obj_RailbedPlank003 1
+    3300080: Obj_RailbedPlank004
+    3300082: Obj_RailbedPlank004 1
+    3300084: Obj_RailbedPlank005
+    3300086: Obj_RailbedPlank005 1
+    3300088: Obj_RailbedPlank006
+    3300090: Obj_RailbedPlank006 1
+    3300092: Obj_RailbedPlank007
+    3300094: Obj_RailbedPlank007 1
+    3300096: Obj_RailbedPlank008
+    3300098: Obj_RailbedPlank008 1
+    3300100: Obj_RailbedPlank009
+    3300102: Obj_RailbedPlank009 1
+    3300104: Obj_RailbedPlank010
+    3300106: Obj_RailbedPlank010 1
+    3300108: Obj_RailbedPlank011
+    3300110: Obj_RailbedPlank011 1
+    3300112: Obj_RailbedPlank012
+    3300114: Obj_RailbedPlank012 1
+    3300116: Obj_RailbedPlank013
+    3300118: Obj_RailbedPlank013 1
+    3300120: Obj_RailbedPlank014
+    3300122: Obj_RailbedPlank015
+    3300124: Obj_RailbedPlank016
+    3300126: Obj_RailbedPlank017
+    3300128: Obj_RailbedPlank018
+    3300130: Obj_RailbedPlank019
+    3300132: Obj_RailbedPlank020
+    3300134: Obj_RailbedPlank021
+    3300136: Obj_RailbedPlank022
+    3300138: Obj_RailbedPlank023
+    3300140: Obj_RailbedPlank024
+    3300142: Obj_RailbedPlank025
+    3300144: Obj_RailbedPlank026
+    3300146: Obj_RailbedPlank027
+    3300148: Obj_RailbedPlank028
+    3300150: Obj_RailbedPlank029
+    3300152: Obj_RailbedPlank030
+    3300154: Obj_RailbedPlank031
+    3300156: Obj_RailbedPlank032
+    3300158: Obj_RailbedPlank033
+    3300160: Obj_RailbedPlank034
+    3300162: Obj_RailbedPlank035
+    3300164: Obj_RailbedPlank036
+    3300166: Obj_RailbedPlank037
+    3300168: Obj_RailbedPlank038
+    3300170: Obj_RailbedPlank039
+    3300172: Obj_RailbedPlank040
+    3300174: Obj_RailbedPlank041
+    3300176: Obj_RailbedPlank042
+    3300178: Obj_RailbedPlank043
+    3300180: Obj_RailbedPlank044
+    3300182: Obj_RailbedPlank045
+    3300184: Obj_RailbedPlank046
+    3300186: Obj_RailbedPlank047
+    3300188: Obj_RailBridge_BrokenBeam
+    3300190: Obj_RailBridge_BrokenBeam1
+    3300192: Obj_RailBridge_CrossBeam
+    3300194: Obj_RailBridge_CrossBeam 1
+    3300196: Obj_RailBridge_CrossBeam 2
+    3300198: Obj_RailBridge_SupportBeam_L
+    3300200: Obj_RailBridge_SupportBeam_L 1
+    3300202: Obj_RailBridge_SupportBeam_L 2
+    3300204: Obj_RailBridge_SupportBeam_R
+    3300206: Obj_RailBridge_SupportBeam_R 1
+    3300208: Obj_RailBridge_SupportBeam_R 2
+    3300210: Obj_Rock001_001
+    3300212: Obj_Rock001_002
+    3300214: Obj_Rock002_001
+    3300216: Obj_Rock002_002
+    3300218: Obj_Rock002_003
+    3300220: Obj_Shack
+    3300222: Obj_Terrain
+    3300224: Obj_Terrain1_DUP
+    3300226: Obj_Water
+    3300228: pCube12
+    4300000: Obj_Shack
+    4300002: Obj_HeroAsset
+    4300004: Obj_Terrain
+    4300006: Obj_Water
+    4300008: Obj_Rock001_001
+    4300010: Obj_Rock002_001
+    4300012: Obj_Rock002_002
+    4300014: Obj_Rock002_003
+    4300016: Obj_Minecart_Chassis
+    4300018: Obj_Minecart_frontLight
+    4300020: Obj_Minecart_rearLight
+    4300022: Obj_Minecart_frontAxle
+    4300024: Obj_Minecart_frontWheel_R
+    4300026: Obj_Minecart_frontWheel_L
+    4300028: Obj_Minecart_rearAxle
+    4300030: Obj_Minecart_rearWheel_R
+    4300032: Obj_Minecart_rearWheel_L
+    4300034: Obj_Rail_R
+    4300036: Obj_Rail_L
+    4300038: Obj_RailbedPlank001
+    4300040: Obj_RailbedPlank002
+    4300042: Obj_RailbedPlank003
+    4300044: Obj_RailbedPlank004
+    4300046: Obj_RailbedPlank005
+    4300048: Obj_RailbedPlank006
+    4300050: Obj_RailbedPlank007
+    4300052: Obj_RailbedPlank008
+    4300054: Obj_RailbedPlank009
+    4300056: Obj_RailbedPlank010
+    4300058: Obj_RailbedPlank011
+    4300060: Obj_RailbedPlank012
+    4300062: Obj_RailbedPlank013
+    4300064: Obj_RailbedPlank014
+    4300066: Obj_BufferPost_R
+    4300068: Obj_BufferPost_L
+    4300070: Obj_BufferBeam_Top
+    4300072: Obj_BufferBeam_Bottom
+    4300074: Obj_Bridge_SupportBeam_Broken
+    4300076: Obj_Bridge_SupportBeam
+    4300078: Obj_Bridge_Broken_v2_001
+    4300080: Obj_Bridge_Platform
+    4300082: Obj_Bridge_Broken_v2_002
+    4300084: Obj_Cave_Entrance
+    4300086: Obj_Mine_Support_R
+    4300088: Obj_Mine_Support_L
+    4300090: Obj_Mine_Support_Crossbeam
+    4300092: Obj_Rail_R
+    4300094: Obj_Rail_L
+    4300096: Obj_RailbedPlank001
+    4300098: Obj_RailbedPlank002
+    4300100: Obj_RailbedPlank003
+    4300102: Obj_RailbedPlank004
+    4300104: Obj_RailbedPlank005
+    4300106: Obj_RailbedPlank006
+    4300108: Obj_RailbedPlank007
+    4300110: Obj_RailbedPlank008
+    4300112: Obj_RailbedPlank009
+    4300114: Obj_RailbedPlank010
+    4300116: Obj_RailbedPlank011
+    4300118: Obj_RailbedPlank012
+    4300120: Obj_RailbedPlank013
+    4300122: Obj_RailbedPlank015
+    4300124: Obj_RailbedPlank016
+    4300126: Obj_RailbedPlank017
+    4300128: Obj_RailbedPlank018
+    4300130: Obj_RailbedPlank019
+    4300132: Obj_RailbedPlank020
+    4300134: Obj_RailbedPlank021
+    4300136: Obj_RailbedPlank022
+    4300138: Obj_RailbedPlank023
+    4300140: Obj_RailbedPlank024
+    4300142: Obj_RailbedPlank025
+    4300144: Obj_RailbedPlank026
+    4300146: Obj_RailbedPlank027
+    4300148: Obj_RailbedPlank028
+    4300150: Obj_RailbedPlank029
+    4300152: Obj_RailbedPlank030
+    4300154: Obj_RailbedPlank031
+    4300156: Obj_RailbedPlank032
+    4300158: Obj_RailbedPlank033
+    4300160: Obj_RailbedPlank034
+    4300162: Obj_RailbedPlank035
+    4300164: Obj_RailbedPlank036
+    4300166: Obj_RailbedPlank037
+    4300168: Obj_RailbedPlank038
+    4300170: Obj_RailbedPlank039
+    4300172: Obj_RailbedPlank040
+    4300174: Obj_RailbedPlank041
+    4300176: Obj_RailbedPlank042
+    4300178: Obj_RailbedPlank043
+    4300180: Obj_RailbedPlank044
+    4300182: Obj_RailbedPlank045
+    4300184: Obj_RailbedPlank046
+    4300186: Obj_RailbedPlank047
+    4300188: Obj_RailBridge_BrokenBeam
+    4300190: Obj_RailBridge_BrokenBeam1
+    4300192: Obj_RailBridge_SupportBeam_R
+    4300194: Obj_RailBridge_SupportBeam_L
+    4300196: Obj_RailBridge_CrossBeam
+    4300198: Obj_RailBridge_SupportBeam_R
+    4300200: Obj_RailBridge_SupportBeam_L
+    4300202: Obj_RailBridge_CrossBeam
+    4300204: Obj_RailBridge_SupportBeam_R
+    4300206: Obj_RailBridge_SupportBeam_L
+    4300208: Obj_RailBridge_CrossBeam
+    4300210: Obj_Cave_Entrance1
+    4300212: Obj_Rock001_002
+    4300214: pCube12
+    4300216: Obj_Minecart_Chassis
+    4300218: Obj_Minecart_rearLight
+    4300220: Obj_Minecart_rearWheel_R
+    4300222: Obj_Minecart_rearWheel_L
+    4300224: Obj_Minecart_frontAxle
+    4300226: Obj_Minecart_frontWheel_L
+    4300228: Obj_Terrain1_DUP
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShaderfxShader1
+    second: {fileID: 2100000, guid: ef168478032f64440a45438d94c3bc05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StingrayPBS1
+    second: {fileID: 2100000, guid: 01600dc6454fc16479ad424a71ab269f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 0de6cedddc7e6b6498dd5f1c3dce6e72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: 94d23e2a8c6814c49a1117ae2c646d0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: 90b5ef28b61cd0345baad012949b8919, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bake_Test_normals
+    second: {fileID: 2800000, guid: ac63bb6e0b457c84695895e48a78beaf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bake_Test_occlusion
+    second: {fileID: 2800000, guid: 73d380aee0b78824897b111518e2d3f3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Checkpoint_Texture
+    second: {fileID: 2800000, guid: 15cf0b13dd61df748b0a7a65878eb5d3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Texture_Tiling_Planks_v002
+    second: {fileID: 2800000, guid: 8cd920a2c646c8b429a8c30a140be1d8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Texture_Tiling_Water_v002
+    second: {fileID: 2800000, guid: 4e51bb4156b6bbd459debf84fa10dde8, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
