@@ -370,7 +370,6 @@ public class CustomisationSet : MonoBehaviour
             i++;
 
             #endregion
-
             #region Mouth
 
             if (GUI.Button(new Rect(6.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
@@ -388,7 +387,6 @@ public class CustomisationSet : MonoBehaviour
             i++;
 
             #endregion
-
             #region Eyes
 
             if (GUI.Button(new Rect(6.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
@@ -406,7 +404,6 @@ public class CustomisationSet : MonoBehaviour
             i++;
 
             #endregion
-
             #region Hair
 
             if (GUI.Button(new Rect(6.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
@@ -424,7 +421,6 @@ public class CustomisationSet : MonoBehaviour
             i++;
 
             #endregion
-
             #region Clothes
 
             if (GUI.Button(new Rect(6.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
@@ -442,7 +438,6 @@ public class CustomisationSet : MonoBehaviour
             i++;
 
             #endregion
-
             #region Armour
 
             if (GUI.Button(new Rect(6.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
@@ -481,15 +476,12 @@ public class CustomisationSet : MonoBehaviour
 
             if (GUI.Button(new Rect(7.25f * scrW, scrH + i * (0.5f * scrH), scrW, 0.5f * scrH), "Reset"))
             {
-                if (GUI.Button(new Rect(6.25f * scrW, scrH + i * (0.5f * scrH), scrW, 0.5f * scrH), "Random"))
-                {
                     SetTexture("Skin", skinIndex = 0);
                     SetTexture("Mouth", mouthIndex = 0);
                     SetTexture("Eyes", eyesIndex = 0);
                     SetTexture("Hair", hairIndex = 0);
                     SetTexture("Clothes", clothesIndex = 0);
                     SetTexture("Armour", armourIndex = 0);
-                }
             }
 
             i++;

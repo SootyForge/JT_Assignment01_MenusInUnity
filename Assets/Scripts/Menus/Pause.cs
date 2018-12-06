@@ -37,9 +37,10 @@ public class Pause : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             // If the Skills Window is open... just close the Skills Window (don't change anything else).
-            if (skillMenu.showSkills)
+            if (skillMenu.showSkills || Inventory.showInv)
             {
                 skillMenu.showSkills = false;
+                Inventory.showInv = false;
                 Time.timeScale = 1;
                 paused = false;
                 Cursor.lockState = CursorLockMode.Locked;
@@ -59,10 +60,11 @@ public class Pause : MonoBehaviour
     public void TogglePause()
     {
         // If the game is paused and we're NOT in the Options Menu... resume (un-pause) the game.
-        if (paused && !handler.showOptions)
+        if (paused && !handler.showOptions && !Inventory.showInv)
         {
             Time.timeScale = 1;
             paused = false;
+            pauseMenu.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
@@ -70,12 +72,19 @@ public class Pause : MonoBehaviour
         else if (paused && handler.showOptions)
         {
             handler.ToggleOptions();
+            pauseMenu.SetActive(true);
+        }
+        else if (paused && !handler.showOptions && Inventory.showInv)
+        {
+            paused = false;
+            pauseMenu.SetActive(false);
         }
         // Otherwise (if the game is NOT paused)... pause the game.
         else
         {
             Time.timeScale = 0;
             paused = true;
+            pauseMenu.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }

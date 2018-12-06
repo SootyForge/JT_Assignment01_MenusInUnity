@@ -28,7 +28,7 @@ public class MenuHandler : MonoBehaviour
     //2 Individual field for every control input KeyCode (required to save/load keybindings).
     [Header("Keys")]
     public KeyCode holdingKey;
-    public KeyCode forward, backward, left, right, jump, crouch, sprint, interact;
+    public KeyCode forward, backward, left, right, jump, crouch, sprint, interact, inventory, skills;
 
     [Header("References")]
     //2 Reference to your main AudioSource.
@@ -49,7 +49,7 @@ public class MenuHandler : MonoBehaviour
     [Header("KeyBind References")]
     //3 Make a Text placeholder for every control input (control input stuff).
     public Text forwardText;
-    public Text backwardText, leftText, rightText, jumpText, crouchText, sprintText, interactText;
+    public Text backwardText, leftText, rightText, jumpText, crouchText, sprintText, interactText, inventoryText, skillsText;
 
     #endregion
 
@@ -74,6 +74,8 @@ public class MenuHandler : MonoBehaviour
         crouch = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Crouch", "LeftControl"));
         sprint = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Sprint", "LeftShift"));
         interact = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Interact", "E"));
+        inventory = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Inventory", "Tab"));
+        skills = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Skills", "K"));
 
         //4(?) Make the currently assigned KeyCode display on the keybind buttons (otherwise it'll be blank on start).
         forwardText.text = forward.ToString();
@@ -84,7 +86,8 @@ public class MenuHandler : MonoBehaviour
         crouchText.text = crouch.ToString();
         sprintText.text = sprint.ToString();
         interactText.text = interact.ToString();
-
+        inventoryText.text = inventory.ToString();
+        skillsText.text = skills.ToString();
 
         //4(?) Loading other saved settings.
         mainAudio.volume = PlayerPrefs.GetFloat("Volume", mainAudio.volume);
@@ -282,7 +285,7 @@ public class MenuHandler : MonoBehaviour
             if (e.keyCode != KeyCode.None)
             {
                 //3 "... if the current keyCode Event is NOT already in use by any of these other controls..."
-                if (!(e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact))
+                if (!(e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact || e.keyCode == inventory || e.keyCode == skills))
                 {
                     //3 "... set 'forward' to its new keyCode, empty holdingKey, and display the new key as a string."
                     forward = e.keyCode;
@@ -308,7 +311,7 @@ public class MenuHandler : MonoBehaviour
 
             if (e.keyCode != KeyCode.None)
             {
-                if (!(e.keyCode == forward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact))
+                if (!(e.keyCode == forward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact || e.keyCode == inventory || e.keyCode == skills))
                 {
                     backward = e.keyCode;
                     holdingKey = KeyCode.None;
@@ -330,7 +333,7 @@ public class MenuHandler : MonoBehaviour
 
             if (e.keyCode != KeyCode.None)
             {
-                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact))
+                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact || e.keyCode == inventory || e.keyCode == skills))
                 {
                     left = e.keyCode;
                     holdingKey = KeyCode.None;
@@ -352,7 +355,7 @@ public class MenuHandler : MonoBehaviour
 
             if (e.keyCode != KeyCode.None)
             {
-                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact))
+                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact || e.keyCode == inventory || e.keyCode == skills))
                 {
                     right = e.keyCode;
                     holdingKey = KeyCode.None;
@@ -374,7 +377,7 @@ public class MenuHandler : MonoBehaviour
 
             if (e.keyCode != KeyCode.None)
             {
-                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact))
+                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact || e.keyCode == inventory || e.keyCode == skills))
                 {
                     jump = e.keyCode;
                     holdingKey = KeyCode.None;
@@ -396,7 +399,7 @@ public class MenuHandler : MonoBehaviour
 
             if (e.keyCode != KeyCode.None)
             {
-                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == sprint || e.keyCode == interact))
+                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == sprint || e.keyCode == interact || e.keyCode == inventory || e.keyCode == skills))
                 {
                     crouch = e.keyCode;
                     holdingKey = KeyCode.None;
@@ -418,7 +421,7 @@ public class MenuHandler : MonoBehaviour
 
             if (e.keyCode != KeyCode.None)
             {
-                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == interact))
+                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == interact || e.keyCode == inventory || e.keyCode == skills))
                 {
                     sprint = e.keyCode;
                     holdingKey = KeyCode.None;
@@ -440,7 +443,7 @@ public class MenuHandler : MonoBehaviour
 
             if (e.keyCode != KeyCode.None)
             {
-                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint))
+                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == inventory || e.keyCode == skills))
                 {
                     interact = e.keyCode;
                     holdingKey = KeyCode.None;
@@ -453,7 +456,51 @@ public class MenuHandler : MonoBehaviour
                     interactText.text = interact.ToString();
                 }
             }
-        }  
+        }
+        #endregion
+        #region Inventory
+        if (inventory == KeyCode.None)
+        {
+            Debug.Log("KeyCode: " + e.keyCode);
+
+            if (e.keyCode != KeyCode.None)
+            {
+                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact || e.keyCode == skills))
+                {
+                    inventory = e.keyCode;
+                    holdingKey = KeyCode.None;
+                    inventoryText.text = inventory.ToString();
+                }
+                else
+                {
+                    inventory = holdingKey;
+                    holdingKey = KeyCode.None;
+                    inventoryText.text = inventory.ToString();
+                }
+            }
+        }
+        #endregion
+        #region Skills
+        if (skills == KeyCode.None)
+        {
+            Debug.Log("KeyCode: " + e.keyCode);
+
+            if (e.keyCode != KeyCode.None)
+            {
+                if (!(e.keyCode == forward || e.keyCode == backward || e.keyCode == left || e.keyCode == right || e.keyCode == jump || e.keyCode == crouch || e.keyCode == sprint || e.keyCode == interact || e.keyCode == inventory))
+                {
+                    skills = e.keyCode;
+                    holdingKey = KeyCode.None;
+                    skillsText.text = skills.ToString();
+                }
+                else
+                {
+                    skills = holdingKey;
+                    holdingKey = KeyCode.None;
+                    skillsText.text = skills.ToString();
+                }
+            }
+        }
         #endregion
         #endregion
     }
@@ -547,7 +594,29 @@ public class MenuHandler : MonoBehaviour
             interact = KeyCode.None;
             interactText.text = interact.ToString();
         }
-    } 
+    }
+    #endregion
+    #region +void KeyIInventory()
+    public void KeyIInventory()
+    {
+        if (!(forward == KeyCode.None || backward == KeyCode.None || left == KeyCode.None || right == KeyCode.None || jump == KeyCode.None || crouch == KeyCode.None || sprint == KeyCode.None || interact == KeyCode.None || skills == KeyCode.None))
+        {
+            holdingKey = inventory;
+            inventory = KeyCode.None;
+            inventoryText.text = inventory.ToString();
+        }
+    }
+    #endregion
+    #region +void KeyJSkills()
+    public void KeyJSkills()
+    {
+        if (!(forward == KeyCode.None || backward == KeyCode.None || left == KeyCode.None || right == KeyCode.None || jump == KeyCode.None || crouch == KeyCode.None || sprint == KeyCode.None || interact == KeyCode.None || inventory == KeyCode.None))
+        {
+            holdingKey = skills;
+            skills = KeyCode.None;
+            skillsText.text = skills.ToString();
+        }
+    }
     #endregion
     #endregion
 

@@ -46,14 +46,11 @@ public class Inventory : MonoBehaviour
     // Where we check input to execute 'ToggleInv()'. Pretty much the same way Pause is done.
     #region void Update()
     // Update is called every frame, if the MonoBehaviour is enabled
-    void Update()
+    public void InventoryToggle()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (!Pause.paused)
         {
-            if (!Pause.paused)
-            {
-                ToggleInv();
-            }
+            ToggleInv();
         }
     }
     #endregion
@@ -150,7 +147,7 @@ public class Inventory : MonoBehaviour
                 if (GUI.Button(new Rect(11.5f * scr.x, 0.25f * scr.y, scr.x, 0.25f * scr.y), "Quest"))
                 {
                     sortType = "Quest";
-                } 
+                }
                 #endregion
 
                 // When we run any interaction with OnGUI(), execute DisplayInv(sortType) ← We changed the sortType when we clicked on the Sorting Buttons.
@@ -169,7 +166,7 @@ public class Inventory : MonoBehaviour
                         {
                             Destroy(curHelm);
                         }
-                        
+
                         GameObject clone = Instantiate(Resources.Load("Prefab/" + selectedItem.MeshName) as GameObject, dropLocation.position, Quaternion.identity);
                         clone.AddComponent<Rigidbody>().useGravity = true;
 

@@ -43,23 +43,19 @@ public class LevelUp : MonoBehaviour
         /// Garbage.
         /// // This was an old way I was getting stats without a for loop.
         /// stats = new int[] { levelRef.statSTR, levelRef.statDEX , levelRef.statCON , levelRef.statINT , levelRef.statWIS , levelRef.statCHA };
-    } 
+    }
     #endregion
 
     // Where we execute some of our self-contained bits (i.e. 'ToggleSkills()' and 'OnLevelUp()').
     #region -void Update() - Execute Stuff
     // Update is called every frame, if the MonoBehaviour is enabled
-    private void Update()
+    public void SkillsToggle()
     {
-        // If Key Input...
-        if (Input.GetKeyDown(KeyCode.K))
+        // And if the game is not paused...
+        if (!Pause.paused)
         {
-            // And if the game is not paused...
-            if (!Pause.paused)
-            {
-                // Run 'ToggleSkills()' (Turn on or off (Show or Hide the Skill Window)).
-                ToggleSkills();
-            }
+            // Run 'ToggleSkills()' (Turn on or off (Show or Hide the Skill Window)).
+            ToggleSkills();
         }
         /// Garbage.
         /// This isn't broken, but it's solved elsewhere; this was when trying to get the Skill Window hidden when paused.
@@ -100,7 +96,7 @@ public class LevelUp : MonoBehaviour
             // return (true); ← Set 'public bool ToggleSkills()' to true.
             return (true);
         }
-    } 
+    }
     #endregion
 
     // Where we create the GUI stuff.
@@ -141,7 +137,7 @@ public class LevelUp : MonoBehaviour
                 }
             }
         }
-    } 
+    }
     #endregion
 
     // Where we make the act of leveling up actually do something.
@@ -153,6 +149,6 @@ public class LevelUp : MonoBehaviour
             points += 5;
             level = levelRef.level;
         }
-    } 
+    }
     #endregion
 }
