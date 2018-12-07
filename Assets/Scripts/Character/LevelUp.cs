@@ -149,6 +149,7 @@ public class LevelUp : MonoBehaviour
             points += 5;
             level = levelRef.level;
         }
+        PlayerPrefs.SetInt("CharacterLevel", level);
     }
     #endregion
 }

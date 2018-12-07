@@ -42,6 +42,7 @@ public class CustomisationSet : MonoBehaviour
     public int[] stats = new int[6];
     public int[] tempStats = new int[6];
     public int points = 10;
+    public int level;
 
     [Header("Character Class")]
     //2 Need lots of stuff here to make choosing a character class possible. More specifically:
@@ -61,7 +62,7 @@ public class CustomisationSet : MonoBehaviour
     [Header("GUI Styles")]
     //8 Header says it all.
     public GUIStyle backButton;
-    public GUIStyle fieldButton, fieldButtonLocked, leftArrow, rightArrow, startButton, startLocked, charCreateBox, charInfoBox;
+    public GUIStyle fieldButton, fieldButtonLocked, leftArrow, rightArrow, startButton, startLocked, charCreateBox, charInfoBox, charInfoName, charInfoClass, charInfoLevel;
 
     #endregion
 
@@ -78,6 +79,8 @@ public class CustomisationSet : MonoBehaviour
         //3 Create names for those string arrays you made before, please.
         statArray = new string[] { "Strength", "Dexterity", "Constitution", "Wisdom", "Intelligence", "Charisma" };
         selectedClass = new string[] { "Barbarian", "Bard", "Druid", "Monk", "Paladin", "Ranger", "Sorcerer", "Warlock" };
+
+        level = level + 1;
 
         //3 Need to set up several for loops in order to load textures available from the Resources folder.
         #region for loop(s) - Pull Textures from Resources
@@ -165,6 +168,8 @@ public class CustomisationSet : MonoBehaviour
 
         //3 Set default class.
         ChooseClass(selectedIndex);
+
+        level = PlayerPrefs.GetInt("CharacterLevel");
 
         #endregion
     }
@@ -316,6 +321,8 @@ public class CustomisationSet : MonoBehaviour
 
         //6 This is setting CharacterClass. Moving along.
         PlayerPrefs.SetString("CharacterClass", selectedClass[selectedIndex]);
+
+        PlayerPrefs.SetInt("CharacterLevel", 1);
     }
 
     //7 OnGUI is called for rendering and handling GUI events
@@ -335,19 +342,57 @@ public class CustomisationSet : MonoBehaviour
         GUI.Box(new Rect(2.491667f * scrW, 7.716667f * scrH, 4.791667f * scrW, 0.333333f * scrH), "", charInfoBox);
         #endregion
 
-        
+        //7 Create Character, Delete Character, Start game, and character info fields.
+        #region Main Buttons
+        ///7 Garbage. Regarding refactoring:
+        ///7 Originally, I had a region just like this one for each individual button.
+        ///7 I soon realized this was silly to have the same if statement three times.
+        ///7 So I stuffed it all into this one region. I thought that was interesting.
+
+        //7 When we DON'T have a character saved in PlayerPrefs...
+        if (!PlayerPrefs.HasKey("CharacterName"))
+        {
+            //7 Give us the Create button (clicking it opens the character creation window).
+            if (GUI.Button(new Rect(7.541667f * scrW, 8.175f * scrH, 0.75f * scrW, 0.183333f * scrH), "Create", fieldButton))
+            {
+                showCreate = true;
+            }
+            //7 Draw boxes of the locked Delete/Start 'buttons' (non-interactive).
+            GUI.Box(new Rect(1.508333f * scrW, 8.175f * scrH, 0.75f * scrW, 0.183333f * scrH), "Delete", fieldButtonLocked);
+            GUI.Box(new Rect(14.275f * scrW, 8.625f * scrH, 1.25f * scrW, 0.3f * scrH), "Start", startLocked);
+        }
+        //7 When we DO have a character saved in PlayerPrefs...
+        else
+        {
+            //7 Draw a box of the locked Create 'button' (non-interactive), and
+            //7 Give us the Delete and Start button(s).
+            GUI.Box(new Rect(7.541667f * scrW, 8.175f * scrH, 0.75f * scrW, 0.183333f * scrH), "Create", fieldButtonLocked);
+            if (GUI.Button(new Rect(1.508333f * scrW, 8.175f * scrH, 0.75f * scrW, 0.183333f * scrH), "Delete", fieldButton))
+            {
+                PlayerPrefs.DeleteKey("CharacterName");
+            }
+            if (GUI.Button(new Rect(14.275f * scrW, 8.625f * scrH, 1.25f * scrW, 0.3f * scrH), "Start", startButton))
+            {
+                SceneManager.LoadScene(2);
+            }
+            
+            //7 Draw the Character's Name, Class, and Level in the InfoBox.
+            GUI.Box(new Rect(2.55f * scrW, 7.716667f * scrH, 4.791667f * scrW, 0.333333f * scrH), "" + charName, charInfoName);
+            GUI.Box(new Rect(2.491667f * scrW, 7.716667f * scrH, 4.791667f * scrW, 0.333333f * scrH), "" + charClass, charInfoClass);
+            GUI.Box(new Rect(2.491667f * scrW, 7.716667f * scrH, 4.75f * scrW, 0.333333f * scrH), "Level : " + level, charInfoLevel);
+
+        }
+        #endregion
 
         //7 I can't comment all of this. I'm sorry.
-        #region Create Button
+        #region Character Creation Window Buttons
 
-        //7 Button to execute the Save() Function.
-        if (GUI.Button(new Rect(7.541667f * scrW, 8.175f * scrH, 0.75f * scrW, 0.183333f * scrH), "Create", fieldButton))
-        {
-            showCreate = !showCreate;
-        }
-
+        //7 Show the character creation window.
         if (showCreate)
         {
+            //7 Hide create button with a 'disabled' box version.
+            GUI.Box(new Rect(7.541667f * scrW, 8.175f * scrH, 0.75f * scrW, 0.183333f * scrH), "Create", fieldButtonLocked);
+
             //7 Where we create our GUI elements to make use of the SetTexture() Fuction, amongst other things.
             #region Player Appearance Buttons
 
@@ -582,29 +627,22 @@ public class CustomisationSet : MonoBehaviour
 
             #endregion
 
+            #region Accept (Create Character) + Cancel Buttons
+            if (GUI.Button(new Rect(6.791667f * scrW, 5f * scrH, 0.75f * scrW, 0.183333f * scrH), "Cancel", fieldButton))
+            {
+                showCreate = false;
+            }
             if (GUI.Button(new Rect(7.541667f * scrW, 5f * scrH, 0.75f * scrW, 0.183333f * scrH), "Accept", fieldButton))
             {
                 Save();
                 showCreate = false;
-            }
-        }
-
-        #endregion
-
-        #region Delete Button
-        if (!PlayerPrefs.HasKey("CharacterName"))
-        {
-            GUI.Box(new Rect(1.508333f * scrW, 8.175f * scrH, 0.75f * scrW, 0.183333f * scrH), "Delete", fieldButtonLocked);
-        }
-        if (PlayerPrefs.HasKey("CharacterName"))
-        {
-            if (GUI.Button(new Rect(1.508333f * scrW, 8.175f * scrH, 0.75f * scrW, 0.183333f * scrH), "Delete", fieldButton))
-            {
-                PlayerPrefs.DeleteKey("CharacterName");
             } 
+            #endregion
         }
+
         #endregion
 
+        //7 Back Button. Switches loaded scene to the main menu scene.
         #region Back Button
         if (GUI.Button(new Rect(0.425f * scrW, 8.625f * scrH, 1.25f * scrW, 0.3f * scrH), "Back", backButton))
         {
@@ -612,21 +650,6 @@ public class CustomisationSet : MonoBehaviour
         }
         #endregion
 
-        #region Start Button
-        if (!PlayerPrefs.HasKey("CharacterName"))
-        {
-            GUI.Box(new Rect(14.275f * scrW, 8.625f * scrH, 1.25f * scrW, 0.3f * scrH), "Start", startLocked);
-        }
-
-        if (PlayerPrefs.HasKey("CharacterName"))
-        {
-            if (GUI.Button(new Rect(14.275f * scrW, 8.625f * scrH, 1.25f * scrW, 0.3f * scrH), "Start", startButton))
-            {
-                SceneManager.LoadScene(2);
-            }
-        }
-        #endregion
-        
     }
 
     //5 Method to make choosing a different class actually mean something (erm... sort of.).

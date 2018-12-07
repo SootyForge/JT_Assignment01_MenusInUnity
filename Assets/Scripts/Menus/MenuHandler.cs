@@ -120,6 +120,8 @@ public class MenuHandler : MonoBehaviour
     //4 Method to exit game (return to main menu).
     public void QuitGame()
     {
+        CharacterHandler saveStat = FindObjectOfType<CharacterHandler>();
+        PlayerPrefs.SetInt("CharacterLevel", saveStat.level);
         //4 I mean, it works.
         SceneManager.LoadScene(0);
     }
